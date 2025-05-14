@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Car Buying Form</title>
+  <link rel="stylesheet" href="form.css" />
+</head>
+<body>
+  <div class="container">
+    <form id="buyingForm">
+      <!-- Back Button Inside Form -->
+       
+      <a href="index.html" class="back-button">&#8592;</a>
+
+      <h1>Car Purchase Form</h1>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" required>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required>
+
+      <label for="brand">Select Car Brand:</label>
+      <select id="brand" required>
+        <option value="">--Select Brand--</option>
+        <option value="Tesla">Tesla</option>
+        <option value="Mitsubishi">Mitsubishi</option>
+        <option value="Mazda">Mazda</option>
+        <option value="Toyota">Toyota</option>
+        <option value="Honda">Honda</option>
+      </select>
+
+      <label for="model">Select Car Model:</label>
+      <select id="model" required disabled>
+        <option value="">--Select Model--</option>
+      </select>
+
+      <label for="quantity">Quantity:</label>
+      <input type="number" id="quantity" min="1" value="1" required>
+
+      <p>Total: ₱<span id="total">0</span></p>
+
+      <button type="submit">Place Order</button>
+    </form>
+
+    <!-- Confirmation popup modal -->
+    <div id="popupModal" class="popup-modal">
+      <div class="popup-content">
+        <p>Thank you for buying our car, please come again!</p>
+        <button id="closeModal">Close</button>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="form.js"></script>
+</body>
+</html>

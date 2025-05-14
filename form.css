@@ -1,0 +1,190 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #121212 0%, #1f1f1f 100%);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Back Button Inside the Form */
+.back-button {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  font-size: 30px;  /* Make the arrow larger */
+  color: #00c6ff;
+  text-decoration: none;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.back-button:hover {
+  color: #0072ff;
+}
+
+/* Form container */
+.container {
+  width: 100%;
+  max-width: 600px;
+  background: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+  padding: 40px;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  transition: 0.3s ease-in-out;
+  animation: fadeIn 1s ease-in-out;
+  position: relative; /* Ensure the back button is inside the form */
+}
+
+/* Heading */
+h1 {
+  font-size: 28px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #00c6ff;
+  letter-spacing: 2px;
+}
+
+/* Form labels and inputs */
+label {
+  font-weight: 600;
+  margin-bottom: 8px;
+  display: block;
+  color: #d0d0d0;
+}
+
+input,
+select {
+  width: 100%;
+  padding: 12px 16px;
+  margin-bottom: 20px;
+  border: 2px solid #444;
+  border-radius: 10px;
+  background-color: #222;
+  color: #f1f1f1;
+  font-size: 14px;
+  transition: 0.3s ease;
+  outline: none;
+}
+
+input:focus,
+select:focus {
+  border-color: #00c6ff;
+  box-shadow: 0 0 5px rgba(0, 198, 255, 0.6);
+  background-color: #333;
+}
+
+/* Total text */
+p {
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 10px;
+  text-align: right;
+  color: #ffffff;
+}
+
+/* Button */
+button {
+  width: 100%;
+  padding: 14px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #00c6ff;
+  color: white;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 15px rgba(0, 198, 255, 0.4);
+}
+
+button:hover {
+  background-color: #0072ff;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 18px rgba(0, 114, 255, 0.4);
+}
+
+/* Modal Popup Styles */
+.popup-modal {
+  display: none; /* Initially hidden */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  justify-content: center;
+  align-items: center;
+  animation: fadeInModal 0.5s ease-in-out;
+}
+
+.popup-content {
+  background: #333;
+  color: white;
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  max-width: 500px;
+  width: 100%;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.5);
+  animation: zoomInModal 0.5s ease-in-out;
+}
+
+/* Adjustments for centering text */
+.popup-content p {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center; /* Center the text */
+}
+
+/* Adjustments for button */
+button#closeModal {
+  padding: 10px 20px;
+  background: #00c6ff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+
+button#closeModal:hover {
+  background: #0072ff;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes zoomInModal {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
